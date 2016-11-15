@@ -2,11 +2,16 @@ package ru.fronto1000;
 
 public class Program {
     public static void main(String[] args) {
-        Square square = new Square();
-        Circle circle = new Circle();
-        Rectangle rectangle = new Rectangle();
-        System.out.println(square.getArea());
-        System.out.println(circle.getArea());
-        System.out.println(rectangle.getArea());
+        Areable square = new Square();
+        Areable circle = new Circle();
+        Areable rectangle = new Rectangle();
+        Areable[] arrayFigure = new Areable[3];
+        arrayFigure[0] = square;
+        arrayFigure[1] = circle;
+        arrayFigure[2] = rectangle;
+
+        for(int i = 0; i < arrayFigure.length; i++){
+            System.out.println(arrayFigure[i].getArea());
+        }
     }
 }
